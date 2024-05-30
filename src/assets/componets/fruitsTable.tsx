@@ -18,7 +18,21 @@ export const FruitsTable = ({
 
   return (
     <>
-      <table>
+      <ul className='deneme1'>
+        <h1>Meyveler</h1>
+        {fruits.filter((fruit) => {
+          const productFilter = fruit.name.toLowerCase().includes(inputValue.toLowerCase());
+          const stockControl = !isProductInStock || fruit.inStock;
+          return productFilter && stockControl;
+        }).map((fruit) => (
+          
+            <li key={fruit.id}>{fruit.name} {fruit.price}</li>
+        
+        ))}
+      </ul>
+
+{/* 
+      <table className='fruits-table'>
         <thead>
           <tr>
             <th>Fruits</th>
@@ -36,7 +50,7 @@ export const FruitsTable = ({
           ))
           }
         </tbody>
-      </table>
+      </table> */}
     </>
   );
 };

@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material';
 import { TableWrapperProps, FruitsOrVeggies } from './types';
 
 export const VegetablesTable = ({
@@ -20,7 +19,21 @@ export const VegetablesTable = ({
   console.log(inputValue);
   return (
     <>
-      <table>
+      <ul className='deneme2'>
+        <h1>Sebzeler</h1>
+        {veggies.filter((veggy) => {
+          const productFilter = veggy.name.toLowerCase().includes(inputValue.toLowerCase());
+          const stockControl = !isProductInStock || veggy.inStock;
+          return productFilter && stockControl;
+        }).map((veggy) => (
+          
+            <li key={veggy.id}>{veggy.name} {veggy.price}</li>
+        
+        ))}
+      </ul>
+
+
+      {/* <table className='vegatables'>
         <thead>
           <tr>
             <th>Veggies</th>
@@ -38,7 +51,7 @@ export const VegetablesTable = ({
           ))
           }
         </tbody>
-      </table>
+      </table> */}
     </>
   );
 };

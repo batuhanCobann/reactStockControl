@@ -8,6 +8,7 @@ export const TableWrapper = ({
 }: TableWrapperProps) => {
   return (
     <>
+    <div className='deneme3'>
       <FruitsTable
         inputValue={inputValue}
         isProductInStock={isProductInStock}
@@ -16,6 +17,7 @@ export const TableWrapper = ({
         inputValue={inputValue}
         isProductInStock={isProductInStock}
       />
+    </div>
     </>
   );
 };

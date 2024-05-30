@@ -8,16 +8,18 @@ export const AppWrapper = () => {
 
   return (
     <>
+    
       <InputArea
-        inputValue={inputValue}
-        setInputValue={setInputValue}
-        isProductInStock={isProductInStock}
-        setIsProductInStock={setIsProductInStock}
-      />
-      <TableWrapper
-        inputValue={inputValue}
-        isProductInStock={isProductInStock}
-      />
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          isProductInStock={isProductInStock}
+          setIsProductInStock={setIsProductInStock}
+        />
+        <TableWrapper
+          inputValue={inputValue}
+          isProductInStock={isProductInStock}
+        />
+    
     </>
   );
 };
